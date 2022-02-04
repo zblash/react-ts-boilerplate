@@ -61,6 +61,7 @@
     "file-loader": "^6.2.0",
     "fork-svg-loader": "^0.0.3",
     "html-webpack-loader": "^0.0.5",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "image-webpack-loader": "^8.0.1",
     "jest": "^27.4.5",

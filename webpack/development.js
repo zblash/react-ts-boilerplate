@@ -1,5 +1,5 @@
 // development config
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const webpack = require('webpack');
 const commonConfig = require('./common');
 
@@ -19,9 +19,8 @@ module.exports = merge(commonConfig, {
     historyApiFallback: true,
     port: 3001,
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-module-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // enable HMR globally
-    new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
   ],
 });
