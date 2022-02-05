@@ -6,6 +6,10 @@ module.exports = [
   ...styleLoader(),
   {
     test: /\.tsx?$/,
+    loader: 'babel-loader',
+  },
+  {
+    test: /\.tsx?$/,
     loader: 'ts-loader',
     exclude: /node_modules/,
     options: {
