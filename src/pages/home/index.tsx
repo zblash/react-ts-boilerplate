@@ -10,9 +10,9 @@ function HomePage() {
   HomePage Functions
   */
 
-  return <h1>404</h1>;
+  return <h1>HELLO</h1>;
 }
 
-const _HomePage = HomePage;
+const PureHomePage = React.memo(HomePage);
 
-export { _HomePage as HomePage };
+export { PureHomePage as HomePage };

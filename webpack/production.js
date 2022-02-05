@@ -7,8 +7,8 @@ module.exports = merge(commonConfig, {
   mode: 'production',
   entry: './root/index.tsx',
   output: {
-    filename: 'index.js',
     path: resolve(process.cwd(), 'dist/'),
-    publicPath: '/',
+    filename: '[name].[hash:8].js',
+    chunkFilename: '[id].[hash:8].js',
   },
 });

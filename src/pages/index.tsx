@@ -16,14 +16,26 @@ export const RoutesList: IRoute[] = [{ path: '/', basePath: '/', component: Home
 const Routes = React.memo(() => {
   return (
     <div>
-      <React.Suspense fallback={'Loading'}>
-        <Switch>
-          {RoutesList.map(route => (
-            <Route key={route.path} path={route.path} element={route.component} />
-          ))}
-          <Route element={Page404} />
-        </Switch>
-      </React.Suspense>
+      <Switch>
+        {RoutesList.map(route => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              <React.Suspense fallback={'Loading'}>
+                <route.component />
+              </React.Suspense>
+            }
+          />
+        ))}
+        <Route
+          element={
+            <React.Suspense fallback={'Loading'}>
+              <Page404 />
+            </React.Suspense>
+          }
+        />
+      </Switch>
     </div>
   );
 });
