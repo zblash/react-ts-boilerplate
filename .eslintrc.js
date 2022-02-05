@@ -60,6 +60,9 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
     'prettier',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:testing-library/react',
   ],
   plugins: ['@typescript-eslint', 'react'],
   rules: {
