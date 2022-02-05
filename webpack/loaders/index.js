@@ -9,7 +9,7 @@ module.exports = [
     loader: 'ts-loader',
     exclude: /node_modules/,
     options: {
-      configFile: '/home/zblash/Desktop/react-typescript-boilerplate/tsconfig.json',
+      configFile: '../../tsconfig.json',
     },
   },
   {
