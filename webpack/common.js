@@ -1,4 +1,3 @@
-const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const paths = require('./paths');
@@ -18,7 +17,6 @@ module.exports = {
     rules: loaders,
   },
   plugins: [
-    new CheckerPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
